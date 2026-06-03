@@ -1,29 +1,38 @@
 {
   "msserver2019standard": {
     "label": "Windows Server 2019",
-    "icon": "🪟",
-    "target": "1809-17763.8755",
-    "kb": "KB5087538",
-    "date": "May 12, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/may-12-2026-kb5087538-os-build-17763-8755-d46cf25a-18fd-4909-aac7-05a490880901",
-    "action": "Apply cumulative update KB5087538 via WSUS or Windows Update (supersedes April KB5082123 and OOB KB5091573)",
+    "icon": "\ud83e\ude9f",
+    "target": "1809-17763.8644",
+    "kb": "KB5082123",
+    "date": "April 14, 2026",
+    "url": "https://support.microsoft.com/en-us/topic/april-14-2026-kb5082123-os-build-17763-8644-539c4d59-373c-462e-b31d-de708c4ed156",
+    "action": "Apply cumulative update KB5082123 via WSUS or Windows Update",
     "warning": null,
     "alternatives": [
       {
-        "label": "Apr 2026 CU",
-        "target": "1809-17763.8644 (KB5082123)",
-        "kb": "KB5082123",
-        "date": "April 14, 2026",
-        "url": "https://support.microsoft.com/en-us/topic/april-14-2026-kb5082123-os-build-17763-8644-539c4d59-373c-4eaf-816d-7eea4f309c8a",
-        "action": "Apply April 2026 cumulative update as a rollback target if May CU causes issues",
-        "warning": "⚠️ Pinning to an older CU leaves May 2026 CVEs unpatched. Use only as a temporary rollback."
+        "label": "OOB Apr 19",
+        "target": "1809-17763.8647",
+        "kb": "KB5091573",
+        "date": "April 19, 2026",
+        "url": "https://support.microsoft.com/en-us/topic/april-19-2026-kb5091573-os-build-17763-8647-out-of-band-08263e6c-c20a-423f-8d75-9c6d77a0c75e",
+        "action": "Apply OOB KB5091573 on domain controllers in multi-domain forests with PAM enabled (fixes LSASS crash/restart loop introduced by KB5082123)",
+        "warning": "\u26a0\ufe0f OOB update \u2014 only required if you hit the LSASS crash issue on DCs in multi-domain PAM environments. Supersedes KB5082123."
+      },
+      {
+        "label": "Mar 2026 CU",
+        "target": "1809-17763.8511 (KB5078752)",
+        "kb": "KB5078752",
+        "date": "March 10, 2026",
+        "url": "https://support.microsoft.com/en-us/topic/march-10-2026-kb5078752-os-build-17763-8511-3b1a75ee-23dc-4c80-9f0d-dc807cca842a",
+        "action": "Apply March 2026 cumulative update as a rollback target if April CU causes issues",
+        "warning": "\u26a0\ufe0f Pinning to an older CU leaves April 2026 CVEs unpatched. Use only as a temporary rollback."
       },
       {
         "label": "WSUS Catalog",
         "target": "Latest approved in WSUS",
         "kb": "Via WSUS approval",
         "date": "Per approval cycle",
-        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5087538",
+        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5082123",
         "action": "Approve and deploy via internal WSUS server according to change management process",
         "warning": null
       }
@@ -31,250 +40,250 @@
   },
   "msserver2012r2standard": {
     "label": "Windows Server 2012 R2",
-    "icon": "🪟",
-    "target": "6.3-9600 (KB5087471)",
-    "kb": "KB5087471",
-    "date": "May 12, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/may-12-2026-kb5087471-monthly-rollup-5d7771c6-4a1a-4a52-8806-fbf039d50170",
-    "action": "Apply Monthly Rollup KB5087471 via WSUS (ESU license required; SSU KB5079233 prereq)",
-    "warning": "⚠️ End of Support Oct 2023. ESU required. Final EOL: October 13, 2026 — plan migration.",
+    "icon": "\ud83e\ude9f",
+    "target": "6.3-9600 (KB5082126)",
+    "kb": "KB5082126",
+    "date": "April 14, 2026",
+    "url": "https://support.microsoft.com/en-us/help/5082126",
+    "action": "Apply Monthly Rollup KB5082126 via WSUS (ESU license required; SSU KB5079233 prereq)",
+    "warning": "\u26a0\ufe0f End of Support Oct 2023. ESU required. Final EOL: October 13, 2026 \u2014 plan migration.",
     "alternatives": [
       {
         "label": "Security-Only",
-        "target": "Security-Only Update (May 2026)",
-        "kb": "Verify in WSUS Catalog",
-        "date": "May 12, 2026",
-        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=2026-05+Security-Only+Windows+Server+2012+R2",
-        "action": "Look up the May 2026 Security-Only update for Server 2012 R2 in Update Catalog (ESU required); apply for minimal change footprint",
-        "warning": "⚠️ Security-only skips reliability/quality fixes in the Monthly Rollup. EOL: October 13, 2026 — plan migration to Server 2022."
+        "target": "Security-Only Update",
+        "kb": "KB5082125",
+        "date": "April 14, 2026",
+        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5082125",
+        "action": "Apply security-only update KB5082125 via WSUS for minimal change footprint (ESU license required)",
+        "warning": "\u26a0\ufe0f Security-only skips reliability/quality fixes in the Monthly Rollup. EOL: October 13, 2026 \u2014 plan migration to Server 2022."
       },
       {
-        "label": "Migrate → 2022",
+        "label": "Migrate \u2192 2022",
         "target": "Windows Server 2022",
-        "kb": "N/A — OS upgrade",
+        "kb": "N/A \u2014 OS upgrade",
         "date": "Plan now",
         "url": "https://learn.microsoft.com/en-us/windows-server/get-started/upgrade-overview",
         "action": "Plan in-place upgrade or migration to Windows Server 2022 before October 2026 EOL",
-        "warning": "🚫 Final EOL: October 13, 2026. No further patches after that date even with ESU. Migration is the only long-term fix."
+        "warning": "\ud83d\udeab Final EOL: October 13, 2026. No further patches after that date even with ESU. Migration is the only long-term fix."
       }
     ]
   },
   "msserver2016standard": {
     "label": "Windows Server 2016",
-    "icon": "🪟",
-    "target": "14393.9140 (KB5087537)",
-    "kb": "KB5087537",
-    "date": "May 12, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/may-12-2026-kb5087537-os-build-14393-9140-2ef98591-73f0-4517-9fa0-12764b51858f",
-    "action": "Apply cumulative update KB5087537 via WSUS or Windows Update (supersedes April KB5082198 and OOB KB5091572)",
-    "warning": "⚠️ Server 2016 mainstream support ends January 2027. Begin migration planning to Server 2022 now.",
+    "icon": "\ud83e\ude9f",
+    "target": "14393.9060 (KB5082198)",
+    "kb": "KB5082198",
+    "date": "April 14, 2026",
+    "url": "https://support.microsoft.com/en-us/topic/april-14-2026-kb5082198-os-build-14393-9060-9c1c628a-9294-4ac3-bbf0-05bbba21a6ef",
+    "action": "Apply cumulative update KB5082198 via WSUS or Windows Update",
+    "warning": "\u26a0\ufe0f Server 2016 mainstream support ends January 2027. Begin migration planning to Server 2022 now.",
     "alternatives": [
       {
-        "label": "Apr 2026 CU",
-        "target": "14393.9060 (KB5082198)",
-        "kb": "KB5082198",
-        "date": "April 14, 2026",
-        "url": "https://support.microsoft.com/en-us/topic/april-14-2026-kb5082198-os-build-14393-9060-9c1c628a-9294-43e5-a05f-46f4b6e1bd8d",
-        "action": "Apply April 2026 cumulative update as a rollback target if May CU causes issues",
-        "warning": "⚠️ Pinning to an older CU leaves May 2026 CVEs unpatched. Use only as a temporary rollback."
+        "label": "OOB Apr 19",
+        "target": "14393.9062 (KB5091572)",
+        "kb": "KB5091572",
+        "date": "April 19, 2026",
+        "url": "https://support.microsoft.com/en-us/help/5091572",
+        "action": "Apply OOB KB5091572 on domain controllers in multi-domain forests with PAM enabled (fixes LSASS crash/restart loop introduced by KB5082198)",
+        "warning": "\u26a0\ufe0f OOB update \u2014 only required if you hit the LSASS crash issue on DCs in multi-domain PAM environments. Supersedes KB5082198."
       },
       {
         "label": "WSUS Catalog",
-        "target": "KB5087537 via WSUS",
-        "kb": "KB5087537",
-        "date": "May 12, 2026",
-        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5087537",
-        "action": "Approve and deploy KB5087537 via internal WSUS server (approve SSU KB5088064 first)",
+        "target": "KB5082198 via WSUS",
+        "kb": "KB5082198",
+        "date": "April 14, 2026",
+        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5082198",
+        "action": "Approve and deploy KB5082198 via internal WSUS server according to change management process",
         "warning": null
       },
       {
-        "label": "Migrate → 2022",
+        "label": "Migrate \u2192 2022",
         "target": "Windows Server 2022",
-        "kb": "N/A — OS upgrade",
+        "kb": "N/A \u2014 OS upgrade",
         "date": "Plan ahead",
         "url": "https://learn.microsoft.com/en-us/windows-server/get-started/upgrade-overview",
         "action": "Consider migration to Windows Server 2022 (mainstream support until Oct 2031)",
-        "warning": "⚠️ Server 2016 mainstream support ends January 2027. Begin migration planning now."
+        "warning": "\u26a0\ufe0f Server 2016 mainstream support ends January 2027. Begin migration planning now."
       }
     ]
   },
   "msserver2022standard": {
     "label": "Windows Server 2022",
-    "icon": "🪟",
-    "target": "20348.5139 (KB5087545)",
-    "kb": "KB5087545",
-    "date": "May 12, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/may-12-2026-kb5087545-os-build-20348-5139-6aed2a73-37f9-468c-8bdc-4bae674797cf",
-    "action": "Apply cumulative update KB5087545 via WSUS or Windows Update (supersedes April KB5082142 and OOB KB5091575)",
+    "icon": "\ud83e\ude9f",
+    "target": "20348.5020 (KB5082142)",
+    "kb": "KB5082142",
+    "date": "April 14, 2026",
+    "url": "https://support.microsoft.com/en-us/topic/april-14-2026-kb5082142-os-build-20348-5020-6217e03b-0ee3-488e-9f10-90a1e17e620e",
+    "action": "Apply cumulative update KB5082142 via WSUS or Windows Update",
     "warning": null,
     "alternatives": [
       {
         "label": "WSUS Catalog",
-        "target": "KB5087545 via WSUS",
-        "kb": "KB5087545",
-        "date": "May 12, 2026",
-        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5087545",
-        "action": "Approve and deploy KB5087545 via internal WSUS server (approve SSU KB5089140 first)",
+        "target": "KB5082142 via WSUS",
+        "kb": "KB5082142",
+        "date": "April 14, 2026",
+        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5082142",
+        "action": "Approve and deploy KB5082142 via internal WSUS server according to change management process",
         "warning": null
       },
       {
-        "label": "Apr 2026 CU",
-        "target": "20348.5020 (KB5082142)",
-        "kb": "KB5082142",
-        "date": "April 14, 2026",
-        "url": "https://support.microsoft.com/en-us/topic/april-14-2026-kb5082142-os-build-20348-5020-6217e03b-0ee3-4c8b-9b0e-32f5e7c3bb78",
-        "action": "Apply April 2026 cumulative update as a rollback target if May CU causes issues",
-        "warning": "⚠️ Pinning to an older CU leaves May 2026 CVEs unpatched. Use only as a temporary rollback."
+        "label": "OOB Apr 19",
+        "target": "20348.5024 (KB5091575)",
+        "kb": "KB5091575",
+        "date": "April 19, 2026",
+        "url": "https://support.microsoft.com/en-us/topic/april-19-2026-kb5091575-os-build-20348-5024-out-of-band-4a5a784e-e50a-4358-8093-b1654aecdbd1",
+        "action": "Apply out-of-band update KB5091575 if your environment uses multi-domain forests with PAM enabled (fixes LSASS crash on domain controllers)",
+        "warning": "\u26a0\ufe0f OOB update \u2014 only required if you hit the LSASS crash issue on domain controllers in multi-domain PAM environments. Supersedes KB5082142."
       }
     ]
   },
   ".NET Framework (All Versions)": {
     "label": ".NET Framework",
-    "icon": "🔷",
+    "icon": "\ud83d\udd37",
     "target": "4.8.1 (latest release)",
-    "kb": "May 2026 Cumulative Update (per-OS KB)",
-    "date": "May 12, 2026",
-    "url": "https://learn.microsoft.com/en-us/dotnet/framework/release-notes/2026/05-12-may-cumulative-update",
-    "action": "Apply May 2026 .NET 4.8.1 cumulative update (KB varies by host OS — see release notes table) via Windows Update or WSUS",
-    "warning": "⚠️ Addresses CVE-2026-32177 (.NET Framework Elevation of Privilege). 4.8.1 is the final .NET Framework release.",
+    "kb": "April 2026 Servicing Update",
+    "date": "April 14, 2026",
+    "url": "https://learn.microsoft.com/en-us/dotnet/framework/release-notes/release-notes",
+    "action": "Upgrade from 4.7.x / 4.8 \u2192 4.8.1 via Windows Update or WSUS (April 2026 servicing wave)",
+    "warning": "\u26a0\ufe0f Versions 4.7, 4.7.1, 4.7.2 are outdated. 4.8.1 is the final .NET Framework release.",
     "alternatives": [
       {
-        "label": "Win Server 2022",
-        "target": ".NET 4.8.1 on Server 2022",
-        "kb": "KB5087059",
-        "date": "May 12, 2026",
-        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5087059",
-        "action": "Apply KB5087059 (.NET 3.5 + 4.8.1 cumulative for Server 2022)",
-        "warning": null
+        "label": "4.8 Security Patch",
+        "target": "4.8 \u2014 security servicing only",
+        "kb": "Via Windows Update",
+        "date": "Monthly Patch Tuesday",
+        "url": "https://support.microsoft.com/en-us/topic/microsoft-net-framework-4-8-offline-installer-for-windows-9d23f658-3b97-68ab-d013-aa3c3e7495e0",
+        "action": "Apply .NET 4.8 security servicing update if upgrading to 4.8.1 is not yet approved",
+        "warning": "\u26a0\ufe0f 4.8 still receives security patches but 4.8.1 is the final supported release. Schedule the upgrade."
       },
       {
-        "label": "Win Server 2012 R2",
-        "target": ".NET 4.8 SQR on Server 2012 R2",
-        "kb": "KB5088861",
-        "date": "May 12, 2026",
-        "url": "https://support.microsoft.com/en-us/topic/may-12-2026-security-and-quality-rollup-for-net-framework-3-5-4-6-2-4-7-4-7-1-4-7-2-4-8-for-windows-server-2012-r2-kb5088861-ce0445f7-6b8b-4bf9-8164-ceba3cc29da3",
-        "action": "Apply Security and Quality Rollup KB5088861 for .NET 3.5 / 4.6.2 / 4.7.x / 4.8 on Server 2012 R2 (ESU required)",
-        "warning": "⚠️ Server 2012 R2 requires ESU. Final EOL October 2026."
+        "label": "Update Catalog",
+        "target": "Search 'April 2026 .NET Framework 4.8.1'",
+        "kb": "Verify exact KB",
+        "date": "April 14, 2026",
+        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=2026-04+.NET+Framework+4.8.1",
+        "action": "Look up the exact April 2026 .NET 4.8.1 cumulative KB for your OS in the Microsoft Update Catalog before deployment",
+        "warning": "\u26a0\ufe0f .NET 4.8.1 KB number varies by host OS. Verify in Update Catalog and approve via WSUS."
       },
       {
-        "label": "Migrate → .NET 8",
+        "label": "Migrate \u2192 .NET 8",
         "target": ".NET 8 LTS",
-        "kb": "N/A — runtime upgrade",
+        "kb": "N/A \u2014 runtime upgrade",
         "date": "LTS until Nov 2026",
         "url": "https://dotnet.microsoft.com/en-us/download/dotnet/8.0",
         "action": "Migrate applications to .NET 8 LTS for modern runtime support and future security updates",
-        "warning": "⚠️ .NET Framework 4.x is legacy. New features and performance improvements are only in .NET 5+."
+        "warning": "\u26a0\ufe0f .NET Framework 4.x is legacy. New features and performance improvements are only in .NET 5+."
       }
     ]
   },
   "SQL Server 2019 (All Components)": {
     "label": "SQL Server 2019",
-    "icon": "🗄️",
-    "target": "CU32 + GDR — build 15.0.4470.1",
-    "kb": "KB5090407",
-    "date": "May 12, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/kb5090407-description-of-the-security-update-for-sql-server-2019-cu32-may-12-2026-3551e15f-b89c-4255-bb6a-97f745e642af",
-    "action": "Install CU32 + GDR (KB5090407). CU32 is the final CU; May 2026 security GDR applied on top.",
-    "warning": "⚠️ Mainstream Support ended Feb 28, 2025. Extended Support until Jan 8, 2030.",
+    "icon": "\ud83d\uddc4\ufe0f",
+    "target": "CU32 + GDR \u2014 build 15.0.4465.1",
+    "kb": "KB5084816",
+    "date": "April 14, 2026",
+    "url": "https://support.microsoft.com/help/5084816",
+    "action": "Install CU32 + GDR (KB5084816). CU32 is the final CU; April 2026 security GDR applied on top.",
+    "warning": "\u26a0\ufe0f Mainstream Support ended Feb 28, 2025. Extended Support until Jan 8, 2030.",
     "alternatives": [
       {
         "label": "GDR Only",
-        "target": "GDR — build 15.0.2170.1",
-        "kb": "KB5090408",
-        "date": "May 12, 2026",
-        "url": "https://support.microsoft.com/en-us/topic/kb5090408-description-of-the-security-update-for-sql-server-2019-gdr-may-12-2026-f8d265b3-38e7-4b11-8870-f903185d88d9",
+        "target": "GDR \u2014 build 15.0.2165.1",
+        "kb": "KB5084817",
+        "date": "April 14, 2026",
+        "url": "https://support.microsoft.com/help/5084817",
         "action": "Apply GDR-only patch for security fixes without cumulative update changes (lower change risk)",
-        "warning": "⚠️ GDR-only skips reliability and feature fixes in CU32. Use if CU testing is not yet complete."
+        "warning": "\u26a0\ufe0f GDR-only skips reliability and feature fixes in CU32. Use if CU testing is not yet complete."
       },
       {
-        "label": "Migrate → 2022",
+        "label": "Migrate \u2192 2022",
         "target": "SQL Server 2022",
-        "kb": "N/A — version upgrade",
+        "kb": "N/A \u2014 version upgrade",
         "date": "Plan now",
         "url": "https://learn.microsoft.com/en-us/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
         "action": "Plan upgrade to SQL Server 2022 (mainstream support until Jan 2033)",
-        "warning": "⚠️ Mainstream Support ended Feb 2025. Begin planning upgrade to SQL Server 2022."
+        "warning": "\u26a0\ufe0f Mainstream Support ended Feb 2025. Begin planning upgrade to SQL Server 2022."
       }
     ]
   },
   "SQL Server 2017 (All Components)": {
     "label": "SQL Server 2017",
-    "icon": "🗄️",
-    "target": "CU31 + GDR — build 14.0.3530.2",
-    "kb": "KB5090354",
-    "date": "May 12, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/kb5090354-description-of-the-security-update-for-sql-server-2017-cu31-may-12-2026-278c1395-f4e4-42d3-ba28-4b03067a9656",
-    "action": "Install CU31 + GDR (KB5090354). May 2026 security GDR on top of final CU.",
-    "warning": "⚠️ Mainstream Support ended Oct 2022. Extended Support until Oct 2027.",
+    "icon": "\ud83d\uddc4\ufe0f",
+    "target": "CU31 + GDR \u2014 build 14.0.3525.1",
+    "kb": "KB5084818",
+    "date": "April 14, 2026",
+    "url": "https://support.microsoft.com/help/5084818",
+    "action": "Install CU31 + GDR (KB5084818). April 2026 security GDR on top of final CU.",
+    "warning": "\u26a0\ufe0f Mainstream Support ended Oct 2022. Extended Support until Oct 2027.",
     "alternatives": [
       {
         "label": "GDR Only",
-        "target": "GDR — build 14.0.2110.2",
-        "kb": "KB5090347",
-        "date": "May 12, 2026",
-        "url": "https://support.microsoft.com/en-us/topic/kb5090347-description-of-the-security-update-for-sql-server-2017-gdr-may-12-2026-d3f29107-6614-4f4c-9979-f986763d7e79",
+        "target": "GDR \u2014 build 14.0.2105.1",
+        "kb": "KB5084819",
+        "date": "April 14, 2026",
+        "url": "https://support.microsoft.com/help/5084819",
         "action": "Apply GDR-only patch for security fixes with minimal change impact",
-        "warning": "⚠️ GDR-only skips CU31 reliability and feature fixes. CU31 + GDR is recommended."
+        "warning": "\u26a0\ufe0f GDR-only skips CU31 reliability and feature fixes. CU31 + GDR is recommended."
       },
       {
-        "label": "Migrate → 2022",
+        "label": "Migrate \u2192 2022",
         "target": "SQL Server 2022",
-        "kb": "N/A — version upgrade",
+        "kb": "N/A \u2014 version upgrade",
         "date": "Plan now",
         "url": "https://learn.microsoft.com/en-us/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
-        "action": "Plan upgrade to SQL Server 2022 — mainstream support until January 2033",
-        "warning": "⚠️ Extended Support ends Oct 2027. Upgrade planning should begin now."
+        "action": "Plan upgrade to SQL Server 2022 \u2014 mainstream support until January 2033",
+        "warning": "\u26a0\ufe0f Extended Support ends Oct 2027. Upgrade planning should begin now."
       }
     ]
   },
   "SQL Server 2016 (All Components)": {
     "label": "SQL Server 2016",
-    "icon": "🗄️",
-    "target": "SP3 GDR — build 13.0.6490.1",
-    "kb": "KB5089271",
-    "date": "May 12, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/kb5089271-description-of-the-security-update-for-sql-server-2016-sp3-gdr-may-12-2026-f4c3f32d-5ae9-4eae-ac04-b63de1eae66f",
-    "action": "Install SP3 + GDR (KB5089271). No further CUs will be released for SQL Server 2016.",
-    "warning": "⚠️ Mainstream Support ended July 2021. Extended Support ends July 11, 2026 — migration is urgent.",
+    "icon": "\ud83d\uddc4\ufe0f",
+    "target": "SP3 GDR \u2014 build 13.0.6485.1",
+    "kb": "KB5084821",
+    "date": "April 14, 2026",
+    "url": "https://support.microsoft.com/en-us/topic/kb5084821-description-of-the-security-update-for-sql-server-2016-sp3-gdr-april-14-2026-825c8bb5-cf16-4265-b2db-10ce404287de",
+    "action": "Install SP3 + GDR (KB5084821). No further CUs will be released for SQL Server 2016.",
+    "warning": "\u26a0\ufe0f Mainstream Support ended July 2021. Extended Support ends July 11, 2026 \u2014 migration is urgent.",
     "alternatives": [
       {
-        "label": "Migrate → 2022",
+        "label": "Migrate \u2192 2022",
         "target": "SQL Server 2022",
-        "kb": "N/A — version upgrade",
+        "kb": "N/A \u2014 version upgrade",
         "date": "Plan now",
         "url": "https://learn.microsoft.com/en-us/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
         "action": "Plan upgrade to SQL Server 2022 (mainstream support until Jan 2033)",
-        "warning": "🚫 Extended Support ends July 2026. This is the only long-term fix."
+        "warning": "\ud83d\udeab Extended Support ends July 2026. This is the only long-term fix."
       },
       {
-        "label": "Migrate → 2019",
+        "label": "Migrate \u2192 2019",
         "target": "SQL Server 2019",
-        "kb": "N/A — version upgrade",
+        "kb": "N/A \u2014 version upgrade",
         "date": "Interim option",
         "url": "https://learn.microsoft.com/en-us/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
         "action": "Upgrade to SQL Server 2019 as an interim step if 2022 migration is not yet feasible",
-        "warning": "⚠️ SQL Server 2019 mainstream support ended Feb 2025. Target 2022 for long-term support."
+        "warning": "\u26a0\ufe0f SQL Server 2019 mainstream support ended Feb 2025. Target 2022 for long-term support."
       }
     ]
   },
   "Internet Explorer (All Versions)": {
     "label": "Internet Explorer",
-    "icon": "🌐",
-    "target": "N/A — migrate to Edge",
+    "icon": "\ud83c\udf10",
+    "target": "N/A \u2014 migrate to Edge",
     "kb": "EOL June 15, 2022",
     "date": "Retired",
     "url": "https://learn.microsoft.com/en-us/lifecycle/announcements/internet-explorer-11-end-of-support",
     "action": "Remove IE and migrate to Microsoft Edge (Chromium)",
-    "warning": "🚫 Internet Explorer is fully retired. No security patches. Immediate action required.",
+    "warning": "\ud83d\udeab Internet Explorer is fully retired. No security patches. Immediate action required.",
     "alternatives": [
       {
         "label": "IE Mode (Edge)",
         "target": "Edge + IE Mode",
-        "kb": "N/A — browser migration",
+        "kb": "N/A \u2014 browser migration",
         "date": "Available now",
         "url": "https://learn.microsoft.com/en-us/deployedge/edge-ie-mode",
         "action": "Deploy Edge with IE Mode for legacy intranet sites that require IE rendering engine",
-        "warning": "⚠️ IE Mode in Edge maintains the IE rendering engine for compatibility. Full IE removal is still the goal."
+        "warning": "\u26a0\ufe0f IE Mode in Edge maintains the IE rendering engine for compatibility. Full IE removal is still the goal."
       }
     ]
   }
