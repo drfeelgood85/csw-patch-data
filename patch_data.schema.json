@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/drfeelgood85/csw-patch-data/main/patch_data.schema.json",
+  "title": "CSW Patch Data",
+  "description": "Curator-maintained Microsoft patch recommendations consumed by CSW-Vulnerability-Scanner. Each top-level key identifies a product/family (e.g. 'msserver2019standard') and maps to a recommendation object plus optional alternatives.",
+  "type": "object",
+  "minProperties": 1,
+  "additionalProperties": {
+    "$ref": "#/definitions/recommendation"
+  },
+  "definitions": {
+    "recommendation": {
+      "type": "object",
+      "required": ["label", "target", "kb", "date", "url", "action"],
+      "properties": {
+        "label":        { "type": "string", "minLength": 1 },
+        "icon":         { "type": "string" },
+        "target":       { "type": "string", "minLength": 1 },
+        "kb":           { "type": "string", "minLength": 1 },
+        "date":         { "type": "string", "minLength": 1 },
+        "url":          { "type": "string", "format": "uri" },
+        "action":       { "type": "string", "minLength": 1 },
+        "warning":      { "type": ["string", "null"] },
+        "alternatives": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/alternative" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "alternative": {
+      "type": "object",
+      "required": ["label", "target", "kb", "date", "url", "action"],
+      "properties": {
+        "label":   { "type": "string", "minLength": 1 },
+        "target":  { "type": "string", "minLength": 1 },
+        "kb":      { "type": "string", "minLength": 1 },
+        "date":    { "type": "string", "minLength": 1 },
+        "url":     { "type": "string", "format": "uri" },
+        "action":  { "type": "string", "minLength": 1 },
+        "warning": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    }
+  }
+}

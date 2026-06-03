@@ -1,0 +1,43 @@
+name: Validate patch_data.json
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install jsonschema
+        run: pip install jsonschema==4.23.0
+
+      - name: Validate patch_data.json against schema
+        run: |
+          python - <<'PY'
+          import json, sys
+          from jsonschema import Draft7Validator
+
+          schema = json.load(open("patch_data.schema.json"))
+          data = json.load(open("patch_data.json"))
+
+          v = Draft7Validator(schema)
+          errors = sorted(v.iter_errors(data), key=lambda e: e.path)
+          if errors:
+              for e in errors:
+                  path = "/".join(str(p) for p in e.path) or "(root)"
+                  print(f"::error::{path}: {e.message}")
+              sys.exit(1)
+          print(f"OK — {len(data)} top-level entries validated.")
+          PY
+
+      - name: Confirm JSON is valid UTF-8 and parses
+        run: python -c "import json; json.load(open('patch_data.json'))"
