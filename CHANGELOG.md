@@ -4,6 +4,20 @@ All notable changes to `patch_data.json` are documented here.
 
 Format: `YYYY-MM-DD` — short summary of what changed and why.
 
+## 2026-06-10 — June 2026 Patch Tuesday refresh
+
+- Refreshed 4 Windows Server entries to **June 9, 2026** KBs.
+- Windows Server 2019: KB5087538 → **KB5094123** (build 17763.8880).
+- Windows Server 2016: KB5087537 → **KB5094122** (build 14393.9234).
+- Windows Server 2022: KB5087545 → **KB5094128** (build 20348.5256).
+- Windows Server 2012 R2 (ESU): KB5087471 → **KB5094041** (Monthly Rollup). 4 ESU rollups remaining before October 13, 2026 final EOL.
+- Promoted previous "Apr 2026 CU" rollback alternatives to **"May 2026 CU"** rollbacks on each updated entry.
+- Updated WSUS Catalog search URLs to point to new June KBs.
+- **.NET Framework**: unchanged. June 2026 .NET cumulative update not yet indexed in Microsoft Update Catalog as of 2026-06-10 morning; CVEs (CVE-2026-45491 / -45490 / -45591) per Tenable bulletin likely delivered inside OS LCUs. Will refresh once standalone .NET KBs are published.
+- **SQL Server**: unchanged. June 2026 SQL Server GDR/CU KBs not yet indexed in Microsoft Update Catalog; Talos bulletin flags SQL Server RCEs but no standalone KB has appeared yet. Will refresh once published.
+- IE entry unchanged (permanently retired).
+- Sources: Microsoft Support KB articles for KB5094123 / KB5094128 / KB5094125 / KB5094041; BigFix MS26-JUN content release; Tenable June 2026 Patch Tuesday bulletin.
+
 ## 2026-06-02 — May 2026 Patch Tuesday refresh
 
 - Refreshed all 8 Windows / .NET / SQL entries to **May 12, 2026** KBs.

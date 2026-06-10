@@ -2,28 +2,28 @@
   "msserver2019standard": {
     "label": "Windows Server 2019",
     "icon": "🪟",
-    "target": "1809-17763.8755",
-    "kb": "KB5087538",
-    "date": "May 12, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/may-12-2026-kb5087538-os-build-17763-8755-d46cf25a-18fd-4909-aac7-05a490880901",
-    "action": "Apply cumulative update KB5087538 via WSUS or Windows Update (supersedes April KB5082123 and OOB KB5091573)",
+    "target": "1809-17763.8880",
+    "kb": "KB5094123",
+    "date": "June 9, 2026",
+    "url": "https://support.microsoft.com/en-us/topic/june-9-2026-kb5094123-os-build-17763-8880-19adceff-e266-40ec-8a10-df4bb0e320ea",
+    "action": "Apply cumulative update KB5094123 via WSUS or Windows Update (supersedes KB5087538)",
     "warning": null,
     "alternatives": [
       {
-        "label": "Apr 2026 CU",
-        "target": "1809-17763.8644 (KB5082123)",
-        "kb": "KB5082123",
-        "date": "April 14, 2026",
-        "url": "https://support.microsoft.com/en-us/topic/april-14-2026-kb5082123-os-build-17763-8644-539c4d59-373c-4eaf-816d-7eea4f309c8a",
-        "action": "Apply April 2026 cumulative update as a rollback target if May CU causes issues",
-        "warning": "⚠️ Pinning to an older CU leaves May 2026 CVEs unpatched. Use only as a temporary rollback."
+        "label": "May 2026 CU",
+        "target": "1809-17763.8755 (KB5087538)",
+        "kb": "KB5087538",
+        "date": "May 12, 2026",
+        "url": "https://support.microsoft.com/en-us/topic/may-12-2026-kb5087538-os-build-17763-8755-d46cf25a-18fd-4909-aac7-05a490880901",
+        "action": "Apply May 2026 cumulative update as a rollback target if June CU causes issues",
+        "warning": "⚠️ Pinning to an older CU leaves June 2026 CVEs unpatched. Use only as a temporary rollback."
       },
       {
         "label": "WSUS Catalog",
         "target": "Latest approved in WSUS",
         "kb": "Via WSUS approval",
         "date": "Per approval cycle",
-        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5087538",
+        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5094123",
         "action": "Approve and deploy via internal WSUS server according to change management process",
         "warning": null
       }
@@ -32,20 +32,20 @@
   "msserver2012r2standard": {
     "label": "Windows Server 2012 R2",
     "icon": "🪟",
-    "target": "6.3-9600 (KB5087471)",
-    "kb": "KB5087471",
-    "date": "May 12, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/may-12-2026-kb5087471-monthly-rollup-5d7771c6-4a1a-4a52-8806-fbf039d50170",
-    "action": "Apply Monthly Rollup KB5087471 via WSUS (ESU license required; SSU KB5079233 prereq)",
+    "target": "6.3-9600 (KB5094041)",
+    "kb": "KB5094041",
+    "date": "June 9, 2026",
+    "url": "https://support.microsoft.com/en-us/topic/june-9-2026-kb5094041-monthly-rollup-e749f25c-0646-4154-ac30-a2e3afb721aa",
+    "action": "Apply Monthly Rollup KB5094041 via WSUS (ESU license required; SSU KB5079233 prereq)",
     "warning": "⚠️ End of Support Oct 2023. ESU required. Final EOL: October 13, 2026 — plan migration.",
     "alternatives": [
       {
         "label": "Security-Only",
-        "target": "Security-Only Update (May 2026)",
+        "target": "Security-Only Update (June 9 2026)",
         "kb": "Verify in WSUS Catalog",
-        "date": "May 12, 2026",
-        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=2026-05+Security-Only+Windows+Server+2012+R2",
-        "action": "Look up the May 2026 Security-Only update for Server 2012 R2 in Update Catalog (ESU required); apply for minimal change footprint",
+        "date": "June 9, 2026",
+        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=2026-06+Security-Only+Windows+Server+2012+R2",
+        "action": "Look up the June 2026 Security-Only update for Server 2012 R2 in Update Catalog (ESU required); apply for minimal change footprint",
         "warning": "⚠️ Security-only skips reliability/quality fixes in the Monthly Rollup. EOL: October 13, 2026 — plan migration to Server 2022."
       },
       {
@@ -62,29 +62,29 @@
   "msserver2016standard": {
     "label": "Windows Server 2016",
     "icon": "🪟",
-    "target": "14393.9140 (KB5087537)",
-    "kb": "KB5087537",
-    "date": "May 12, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/may-12-2026-kb5087537-os-build-14393-9140-2ef98591-73f0-4517-9fa0-12764b51858f",
-    "action": "Apply cumulative update KB5087537 via WSUS or Windows Update (supersedes April KB5082198 and OOB KB5091572)",
+    "target": "14393.9234",
+    "kb": "KB5094122",
+    "date": "June 9, 2026",
+    "url": "https://support.microsoft.com/en-us/topic/june-9-2026-kb5094122-os-build-14393-9234",
+    "action": "Apply cumulative update KB5094122 via WSUS or Windows Update (supersedes KB5087537)",
     "warning": "⚠️ Server 2016 mainstream support ends January 2027. Begin migration planning to Server 2022 now.",
     "alternatives": [
       {
-        "label": "Apr 2026 CU",
-        "target": "14393.9060 (KB5082198)",
-        "kb": "KB5082198",
-        "date": "April 14, 2026",
-        "url": "https://support.microsoft.com/en-us/topic/april-14-2026-kb5082198-os-build-14393-9060-9c1c628a-9294-43e5-a05f-46f4b6e1bd8d",
-        "action": "Apply April 2026 cumulative update as a rollback target if May CU causes issues",
-        "warning": "⚠️ Pinning to an older CU leaves May 2026 CVEs unpatched. Use only as a temporary rollback."
+        "label": "May 2026 CU",
+        "target": "14393.9140 (KB5087537)",
+        "kb": "KB5087537",
+        "date": "May 12, 2026",
+        "url": "https://support.microsoft.com/en-us/topic/may-12-2026-kb5087537-os-build-14393-9140-2ef98591-73f0-4517-9fa0-12764b51858f",
+        "action": "Apply May 2026 cumulative update as a rollback target if June CU causes issues",
+        "warning": "⚠️ Pinning to an older CU leaves June 2026 CVEs unpatched. Use only as a temporary rollback."
       },
       {
         "label": "WSUS Catalog",
-        "target": "KB5087537 via WSUS",
-        "kb": "KB5087537",
-        "date": "May 12, 2026",
-        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5087537",
-        "action": "Approve and deploy KB5087537 via internal WSUS server (approve SSU KB5088064 first)",
+        "target": "KB5094122 via WSUS",
+        "kb": "KB5094122",
+        "date": "June 9, 2026",
+        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5094122",
+        "action": "Approve and deploy KB5094122 via internal WSUS server (approve SSU KB5088064 first)",
         "warning": null
       },
       {
@@ -101,30 +101,30 @@
   "msserver2022standard": {
     "label": "Windows Server 2022",
     "icon": "🪟",
-    "target": "20348.5139 (KB5087545)",
-    "kb": "KB5087545",
-    "date": "May 12, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/may-12-2026-kb5087545-os-build-20348-5139-6aed2a73-37f9-468c-8bdc-4bae674797cf",
-    "action": "Apply cumulative update KB5087545 via WSUS or Windows Update (supersedes April KB5082142 and OOB KB5091575)",
+    "target": "20348.5256",
+    "kb": "KB5094128",
+    "date": "June 9, 2026",
+    "url": "https://support.microsoft.com/en-us/topic/june-9-2026-kb5094128-os-build-20348-5256-56823f3e-e2a4-4839-ab01-b9de5ec4cbed",
+    "action": "Apply cumulative update KB5094128 via WSUS or Windows Update (supersedes KB5087545)",
     "warning": null,
     "alternatives": [
       {
         "label": "WSUS Catalog",
-        "target": "KB5087545 via WSUS",
-        "kb": "KB5087545",
-        "date": "May 12, 2026",
-        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5087545",
-        "action": "Approve and deploy KB5087545 via internal WSUS server (approve SSU KB5089140 first)",
+        "target": "KB5094128 via WSUS",
+        "kb": "KB5094128",
+        "date": "June 9, 2026",
+        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5094128",
+        "action": "Approve and deploy KB5094128 via internal WSUS server (approve SSU KB5089140 first)",
         "warning": null
       },
       {
-        "label": "Apr 2026 CU",
-        "target": "20348.5020 (KB5082142)",
-        "kb": "KB5082142",
-        "date": "April 14, 2026",
-        "url": "https://support.microsoft.com/en-us/topic/april-14-2026-kb5082142-os-build-20348-5020-6217e03b-0ee3-4c8b-9b0e-32f5e7c3bb78",
-        "action": "Apply April 2026 cumulative update as a rollback target if May CU causes issues",
-        "warning": "⚠️ Pinning to an older CU leaves May 2026 CVEs unpatched. Use only as a temporary rollback."
+        "label": "May 2026 CU",
+        "target": "20348.5139 (KB5087545)",
+        "kb": "KB5087545",
+        "date": "May 12, 2026",
+        "url": "https://support.microsoft.com/en-us/topic/may-12-2026-kb5087545-os-build-20348-5139-6aed2a73-37f9-468c-8bdc-4bae674797cf",
+        "action": "Apply May 2026 cumulative update as a rollback target if June CU causes issues",
+        "warning": "⚠️ Pinning to an older CU leaves June 2026 CVEs unpatched. Use only as a temporary rollback."
       }
     ]
   },
