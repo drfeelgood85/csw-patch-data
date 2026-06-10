@@ -136,7 +136,7 @@
     "date": "May 12, 2026",
     "url": "https://learn.microsoft.com/en-us/dotnet/framework/release-notes/2026/05-12-may-cumulative-update",
     "action": "Apply May 2026 .NET 4.8.1 cumulative update (KB varies by host OS — see release notes table) via Windows Update or WSUS",
-    "warning": "⚠️ Addresses CVE-2026-32177 (.NET Framework Elevation of Privilege). 4.8.1 is the final .NET Framework release.",
+    "warning": "⚠️ Addresses CVE-2026-32177 (.NET Framework Elevation of Privilege). 4.8.1 is the final .NET Framework release. | Reviewed Jun 10, 2026: no June 2026 update from Microsoft this cycle — May 2026 KBs remain current.",
     "alternatives": [
       {
         "label": "Win Server 2022",
@@ -175,7 +175,7 @@
     "date": "May 12, 2026",
     "url": "https://support.microsoft.com/en-us/topic/kb5090407-description-of-the-security-update-for-sql-server-2019-cu32-may-12-2026-3551e15f-b89c-4255-bb6a-97f745e642af",
     "action": "Install CU32 + GDR (KB5090407). CU32 is the final CU; May 2026 security GDR applied on top.",
-    "warning": "⚠️ Mainstream Support ended Feb 28, 2025. Extended Support until Jan 8, 2030.",
+    "warning": "⚠️ Mainstream Support ended Feb 28, 2025. Extended Support until Jan 8, 2030. | Reviewed Jun 10, 2026: no June 2026 update from Microsoft this cycle — May 2026 KBs remain current.",
     "alternatives": [
       {
         "label": "GDR Only",
@@ -197,6 +197,66 @@
       }
     ]
   },
+  "SQL Server 2022 (All Components)": {
+    "label": "SQL Server 2022",
+    "icon": "🗄️",
+    "target": "CU24 + GDR — build 16.0.4252.3",
+    "kb": "KB5089900",
+    "date": "May 12, 2026",
+    "url": "https://support.microsoft.com/en-us/topic/kb5089900-description-of-the-security-update-for-sql-server-2022-cu24-may-12-2026-695c0545-c0d1-4341-bb92-2f1037fe09b2",
+    "action": "Install CU24 + GDR (KB5089900, build 16.0.4252.3). Apply CU24 first if on CU23 or lower, then this May 2026 security update layers the GDR fixes on top. Do not mix CU and GDR branches.",
+    "warning": "ℹ️ Mainstream support until Jan 11, 2028; Extended until Jan 11, 2033. CU25 (KB5081477, build 16.0.4255.1) shipped May 20, 2026 with no new security fixes beyond CU24+GDR — plan to move to CU25 in next maintenance window. Reviewed Jun 10, 2026: no June 2026 update from Microsoft this cycle — May KBs remain current.",
+    "alternatives": [
+      {
+        "label": "GDR Only",
+        "target": "GDR — build 16.0.1180.1",
+        "kb": "KB5091158",
+        "date": "May 12, 2026",
+        "url": "https://support.microsoft.com/en-us/topic/kb5091158-description-of-the-security-update-for-sql-server-2022-gdr-may-12-2026-15964d04-ba47-4c0b-be12-2644c820ad3b",
+        "action": "Install GDR-only KB5091158 (build 16.0.1180.1) for security fixes without CU content. Lower change risk.",
+        "warning": "⚠️ GDR-only skips CU24 reliability and feature improvements. CU24 + GDR is recommended for most environments."
+      },
+      {
+        "label": "Apr 2026 CU",
+        "target": "CU24 + GDR — build 16.0.4250.1 (KB5083252)",
+        "kb": "KB5083252",
+        "date": "April 14, 2026",
+        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5083252",
+        "action": "Apply April 2026 CU24+GDR (KB5083252) as a rollback target if May CU+GDR causes issues.",
+        "warning": "⚠️ Pinning to an older CU leaves May 2026 CVEs unpatched. Use only as a temporary rollback."
+      }
+    ]
+  },
+  "SQL Server 2025 (All Components)": {
+    "label": "SQL Server 2025",
+    "icon": "🗄️",
+    "target": "CU4 + GDR — build 17.0.4040.1",
+    "kb": "KB5089899",
+    "date": "May 12, 2026",
+    "url": "https://support.microsoft.com/en-us/topic/kb5089899-description-of-the-security-update-for-sql-server-2025-cu4-may-12-2026-de2c44d3-81c5-46f7-a756-d579a067f24e",
+    "action": "Install CU4 + GDR (KB5089899, build 17.0.4040.1). Apply CU4 first if not yet on CU4, then layer the May 2026 GDR via this package. Do not mix CU and GDR branches.",
+    "warning": "ℹ️ SQL Server 2025 is the current major release (GA Nov 2025) — well within mainstream support. CU5 (KB5084896, build 17.0.4045.5) shipped May 20, 2026 with no new May security fixes beyond CU4+GDR. Young product on monthly CU cadence — higher regression risk, test in non-prod first. Reviewed Jun 10, 2026: no June 2026 update from Microsoft this cycle — May KBs remain current.",
+    "alternatives": [
+      {
+        "label": "GDR Only",
+        "target": "GDR — build 17.0.1115.1",
+        "kb": "KB5091223",
+        "date": "May 12, 2026",
+        "url": "https://support.microsoft.com/en-us/topic/kb5091223-description-of-the-security-update-for-sql-server-2025-gdr-may-12-2026-ea6c17d9-8f23-41e8-897a-54387b8f9e10",
+        "action": "Install GDR-only KB5091223 (build 17.0.1115.1) for security fixes without CU content. Lower change risk.",
+        "warning": "⚠️ GDR-only skips CU4 reliability and feature improvements. CU+GDR is recommended for most environments."
+      },
+      {
+        "label": "Apr 2026 CU",
+        "target": "CU3 + GDR — build 17.0.4030.1 (KB5083245)",
+        "kb": "KB5083245",
+        "date": "April 14, 2026",
+        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5083245",
+        "action": "Apply April 2026 CU3+GDR (KB5083245) as a rollback target if May CU+GDR causes issues.",
+        "warning": "⚠️ Pinning to an older CU leaves May 2026 CVEs unpatched. Use only as a temporary rollback."
+      }
+    ]
+  },
   "SQL Server 2017 (All Components)": {
     "label": "SQL Server 2017",
     "icon": "🗄️",
@@ -205,7 +265,7 @@
     "date": "May 12, 2026",
     "url": "https://support.microsoft.com/en-us/topic/kb5090354-description-of-the-security-update-for-sql-server-2017-cu31-may-12-2026-278c1395-f4e4-42d3-ba28-4b03067a9656",
     "action": "Install CU31 + GDR (KB5090354). May 2026 security GDR on top of final CU.",
-    "warning": "⚠️ Mainstream Support ended Oct 2022. Extended Support until Oct 2027.",
+    "warning": "⚠️ Mainstream Support ended Oct 2022. Extended Support until Oct 2027. | Reviewed Jun 10, 2026: no June 2026 update from Microsoft this cycle — May 2026 KBs remain current.",
     "alternatives": [
       {
         "label": "GDR Only",
@@ -235,7 +295,7 @@
     "date": "May 12, 2026",
     "url": "https://support.microsoft.com/en-us/topic/kb5089271-description-of-the-security-update-for-sql-server-2016-sp3-gdr-may-12-2026-f4c3f32d-5ae9-4eae-ac04-b63de1eae66f",
     "action": "Install SP3 + GDR (KB5089271). No further CUs will be released for SQL Server 2016.",
-    "warning": "⚠️ Mainstream Support ended July 2021. Extended Support ends July 11, 2026 — migration is urgent.",
+    "warning": "⚠️ Mainstream Support ended July 2021. Extended Support ends July 11, 2026 — migration is urgent. | Reviewed Jun 10, 2026: no June 2026 update from Microsoft this cycle — May 2026 KBs remain current.",
     "alternatives": [
       {
         "label": "Migrate → 2022",

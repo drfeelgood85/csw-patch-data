@@ -4,6 +4,16 @@ All notable changes to `patch_data.json` are documented here.
 
 Format: `YYYY-MM-DD` — short summary of what changed and why.
 
+## 2026-06-10 — Add SQL Server 2022 / 2025; June 2026 no-update notes
+
+- **Added SQL Server 2022** entry: primary CU24 + GDR (KB5089900, build 16.0.4252.3, May 12, 2026); GDR-only alternative KB5091158 (build 16.0.1180.1); April 2026 CU24+GDR (KB5083252) rollback. Mainstream support until Jan 11, 2028.
+- **Added SQL Server 2025** entry: primary CU4 + GDR (KB5089899, build 17.0.4040.1, May 12, 2026); GDR-only alternative KB5091223 (build 17.0.1115.1); April 2026 CU3+GDR (KB5083245) rollback. GA Nov 2025 — young product on monthly CU cadence.
+- Added "Reviewed Jun 10, 2026: no June 2026 update from Microsoft this cycle — May KBs remain current." note to **.NET Framework**, **SQL Server 2019**, **SQL Server 2017**, **SQL Server 2016** entries to make the verification explicit for operators.
+- Total entries: 9 → **11**.
+- Sources for SQL 2022/2025: learn.microsoft.com SQL Server build-versions tables, individual support.microsoft.com KB articles for KB5089900 / KB5091158 / KB5089899 / KB5091223 (all verified against authoritative MS sources).
+- Confirmation that no .NET Framework June 2026 update exists: devblogs.microsoft.com .NET June 2026 servicing post explicitly states "no new security or non-security updates available this month"; June CVEs apply to modern .NET (10/9/8), not .NET Framework 4.x.
+- Confirmation that no SQL Server June 2026 update exists: learn.microsoft.com "latest updates" page shows May 12, 2026 as most recent for all versions; Microsoft Update Catalog `2026-06 SQL Server` returns zero results; only "SQL"-adjacent June CVE was CVE-2026-47292 (VS Code MSSQL extension, not engine).
+
 ## 2026-06-10 — June 2026 Patch Tuesday refresh
 
 - Refreshed 4 Windows Server entries to **June 9, 2026** KBs.
