@@ -2,28 +2,28 @@
   "msserver2019standard": {
     "label": "Windows Server 2019",
     "icon": "🪟",
-    "target": "1809-17763.8880",
-    "kb": "KB5094123",
-    "date": "June 9, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/june-9-2026-kb5094123-os-build-17763-8880-19adceff-e266-40ec-8a10-df4bb0e320ea",
-    "action": "Apply cumulative update KB5094123 via WSUS or Windows Update (supersedes KB5087538)",
+    "target": "1809-17763.9020",
+    "kb": "KB5099538",
+    "date": "July 14, 2026",
+    "url": "https://support.microsoft.com/help/5099538",
+    "action": "Apply cumulative update KB5099538 via WSUS or Windows Update (supersedes KB5094123)",
     "warning": null,
     "alternatives": [
       {
-        "label": "May 2026 CU",
-        "target": "1809-17763.8755 (KB5087538)",
-        "kb": "KB5087538",
-        "date": "May 12, 2026",
-        "url": "https://support.microsoft.com/en-us/topic/may-12-2026-kb5087538-os-build-17763-8755-d46cf25a-18fd-4909-aac7-05a490880901",
-        "action": "Apply May 2026 cumulative update as a rollback target if June CU causes issues",
-        "warning": "⚠️ Pinning to an older CU leaves June 2026 CVEs unpatched. Use only as a temporary rollback."
+        "label": "Jun 2026 CU",
+        "target": "1809-17763.8880 (KB5094123)",
+        "kb": "KB5094123",
+        "date": "June 9, 2026",
+        "url": "https://support.microsoft.com/en-us/topic/june-9-2026-kb5094123-os-build-17763-8880-19adceff-e266-40ec-8a10-df4bb0e320ea",
+        "action": "Apply June 2026 cumulative update as a rollback target if July CU causes issues",
+        "warning": "⚠️ Pinning to an older CU leaves July 2026 CVEs unpatched. Use only as a temporary rollback."
       },
       {
         "label": "WSUS Catalog",
         "target": "Latest approved in WSUS",
         "kb": "Via WSUS approval",
         "date": "Per approval cycle",
-        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5094123",
+        "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5099538",
         "action": "Approve and deploy via internal WSUS server according to change management process",
         "warning": null
       }
@@ -32,20 +32,20 @@
   "msserver2012r2standard": {
     "label": "Windows Server 2012 R2",
     "icon": "🪟",
-    "target": "6.3-9600 (KB5094041)",
-    "kb": "KB5094041",
-    "date": "June 9, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/june-9-2026-kb5094041-monthly-rollup-e749f25c-0646-4154-ac30-a2e3afb721aa",
-    "action": "Apply Monthly Rollup KB5094041 via WSUS (ESU license required; SSU KB5079233 prereq)",
+    "target": "6.3.9600.23291 (KB5099444)",
+    "kb": "KB5099444",
+    "date": "July 14, 2026",
+    "url": "https://support.microsoft.com/help/5099444",
+    "action": "Apply Monthly Rollup KB5099444 via WSUS (ESU license required; latest SSU prereq)",
     "warning": "⚠️ End of Support Oct 2023. ESU required. Final EOL: October 13, 2026 — plan migration.",
     "alternatives": [
       {
         "label": "Security-Only",
-        "target": "Security-Only Update (June 9 2026)",
+        "target": "Security-Only Update (July 14 2026)",
         "kb": "Verify in WSUS Catalog",
-        "date": "June 9, 2026",
-        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=2026-06+Security-Only+Windows+Server+2012+R2",
-        "action": "Look up the June 2026 Security-Only update for Server 2012 R2 in Update Catalog (ESU required); apply for minimal change footprint",
+        "date": "July 14, 2026",
+        "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=2026-07+Security-Only+Windows+Server+2012+R2",
+        "action": "Look up the July 2026 Security-Only update for Server 2012 R2 in Update Catalog (ESU required); apply for minimal change footprint",
         "warning": "⚠️ Security-only skips reliability/quality fixes in the Monthly Rollup. EOL: October 13, 2026 — plan migration to Server 2022."
       },
       {
@@ -62,29 +62,29 @@
   "msserver2016standard": {
     "label": "Windows Server 2016",
     "icon": "🪟",
-    "target": "14393.9234",
-    "kb": "KB5094122",
-    "date": "June 9, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/june-9-2026-kb5094122-os-build-14393-9234",
-    "action": "Apply cumulative update KB5094122 via WSUS or Windows Update (supersedes KB5087537)",
+    "target": "14393.9339",
+    "kb": "KB5099535",
+    "date": "July 14, 2026",
+    "url": "https://support.microsoft.com/help/5099535",
+    "action": "Apply cumulative update KB5099535 via WSUS or Windows Update (supersedes KB5094122)",
     "warning": "⚠️ Server 2016 mainstream support ends January 2027. Begin migration planning to Server 2022 now.",
     "alternatives": [
       {
-        "label": "May 2026 CU",
-        "target": "14393.9140 (KB5087537)",
-        "kb": "KB5087537",
-        "date": "May 12, 2026",
-        "url": "https://support.microsoft.com/en-us/topic/may-12-2026-kb5087537-os-build-14393-9140-2ef98591-73f0-4517-9fa0-12764b51858f",
-        "action": "Apply May 2026 cumulative update as a rollback target if June CU causes issues",
-        "warning": "⚠️ Pinning to an older CU leaves June 2026 CVEs unpatched. Use only as a temporary rollback."
+        "label": "Jun 2026 CU",
+        "target": "14393.9234 (KB5094122)",
+        "kb": "KB5094122",
+        "date": "June 9, 2026",
+        "url": "https://support.microsoft.com/en-us/topic/june-9-2026-kb5094122-os-build-14393-9234",
+        "action": "Apply June 2026 cumulative update as a rollback target if July CU causes issues",
+        "warning": "⚠️ Pinning to an older CU leaves July 2026 CVEs unpatched. Use only as a temporary rollback."
       },
       {
         "label": "WSUS Catalog",
-        "target": "KB5094122 via WSUS",
-        "kb": "KB5094122",
-        "date": "June 9, 2026",
-        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5094122",
-        "action": "Approve and deploy KB5094122 via internal WSUS server (approve SSU KB5088064 first)",
+        "target": "KB5099535 via WSUS",
+        "kb": "KB5099535",
+        "date": "July 14, 2026",
+        "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5099535",
+        "action": "Approve and deploy KB5099535 via internal WSUS server (approve SSU prerequisite first)",
         "warning": null
       },
       {
@@ -101,30 +101,51 @@
   "msserver2022standard": {
     "label": "Windows Server 2022",
     "icon": "🪟",
-    "target": "20348.5256",
-    "kb": "KB5094128",
-    "date": "June 9, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/june-9-2026-kb5094128-os-build-20348-5256-56823f3e-e2a4-4839-ab01-b9de5ec4cbed",
-    "action": "Apply cumulative update KB5094128 via WSUS or Windows Update (supersedes KB5087545)",
+    "target": "20348.5386",
+    "kb": "KB5099540",
+    "date": "July 14, 2026",
+    "url": "https://support.microsoft.com/help/5099540",
+    "action": "Apply cumulative update KB5099540 via WSUS or Windows Update (supersedes KB5094128)",
     "warning": null,
     "alternatives": [
       {
         "label": "WSUS Catalog",
-        "target": "KB5094128 via WSUS",
-        "kb": "KB5094128",
-        "date": "June 9, 2026",
-        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5094128",
-        "action": "Approve and deploy KB5094128 via internal WSUS server (approve SSU KB5089140 first)",
+        "target": "KB5099540 via WSUS",
+        "kb": "KB5099540",
+        "date": "July 14, 2026",
+        "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5099540",
+        "action": "Approve and deploy KB5099540 via internal WSUS server (approve SSU prerequisite first)",
         "warning": null
       },
       {
-        "label": "May 2026 CU",
-        "target": "20348.5139 (KB5087545)",
-        "kb": "KB5087545",
-        "date": "May 12, 2026",
-        "url": "https://support.microsoft.com/en-us/topic/may-12-2026-kb5087545-os-build-20348-5139-6aed2a73-37f9-468c-8bdc-4bae674797cf",
-        "action": "Apply May 2026 cumulative update as a rollback target if June CU causes issues",
-        "warning": "⚠️ Pinning to an older CU leaves June 2026 CVEs unpatched. Use only as a temporary rollback."
+        "label": "Jun 2026 CU",
+        "target": "20348.5256 (KB5094128)",
+        "kb": "KB5094128",
+        "date": "June 9, 2026",
+        "url": "https://support.microsoft.com/en-us/topic/june-9-2026-kb5094128-os-build-20348-5256-56823f3e-e2a4-4839-ab01-b9de5ec4cbed",
+        "action": "Apply June 2026 cumulative update as a rollback target if July CU causes issues",
+        "warning": "⚠️ Pinning to an older CU leaves July 2026 CVEs unpatched. Use only as a temporary rollback."
+      }
+    ]
+  },
+  "msserver2025standard": {
+    "label": "Windows Server 2025",
+    "icon": "🪟",
+    "target": "26100.33158",
+    "kb": "KB5099536",
+    "date": "July 14, 2026",
+    "url": "https://support.microsoft.com/help/5099536",
+    "action": "Apply cumulative update KB5099536 via WSUS or Windows Update",
+    "warning": "ℹ️ Server 2025 is the current major release (GA Nov 2024) — well within mainstream support.",
+    "alternatives": [
+      {
+        "label": "WSUS Catalog",
+        "target": "KB5099536 via WSUS",
+        "kb": "KB5099536",
+        "date": "July 14, 2026",
+        "url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5099536",
+        "action": "Approve and deploy KB5099536 via internal WSUS server (approve latest SSU first)",
+        "warning": null
       }
     ]
   },
@@ -132,28 +153,55 @@
     "label": ".NET Framework",
     "icon": "🔷",
     "target": "4.8.1 (latest release)",
-    "kb": "May 2026 Cumulative Update (per-OS KB)",
-    "date": "May 12, 2026",
-    "url": "https://learn.microsoft.com/en-us/dotnet/framework/release-notes/2026/05-12-may-cumulative-update",
-    "action": "Apply May 2026 .NET 4.8.1 cumulative update (KB varies by host OS — see release notes table) via Windows Update or WSUS",
-    "warning": "⚠️ Addresses CVE-2026-32177 (.NET Framework Elevation of Privilege). 4.8.1 is the final .NET Framework release. | Reviewed Jun 10, 2026: no June 2026 update from Microsoft this cycle — May 2026 KBs remain current.",
+    "kb": "July 2026 Cumulative Update (per-OS KB)",
+    "date": "July 14, 2026",
+    "url": "https://msrc.microsoft.com/update-guide/releaseNote/2026-Jul",
+    "action": "Apply July 2026 .NET Framework security-and-quality rollup for the applicable OS (KB varies — see release notes). 4.8.1 is the current supported release.",
+    "warning": "⚠️ Addresses .NET Framework CVEs published in the July 14, 2026 CVRF. 4.8.1 is the final .NET Framework release.",
     "alternatives": [
       {
+        "label": "Win Server 2025",
+        "target": ".NET 3.5 + 4.8.1 on Server 2025",
+        "kb": "KB5087057",
+        "date": "July 14, 2026",
+        "url": "https://support.microsoft.com/help/5087057",
+        "action": "Apply KB5087057 (.NET 3.5 + 4.8.1 cumulative for Server 2025)",
+        "warning": null
+      },
+      {
         "label": "Win Server 2022",
-        "target": ".NET 4.8.1 on Server 2022",
+        "target": ".NET 3.5 + 4.8.1 on Server 2022",
         "kb": "KB5087059",
-        "date": "May 12, 2026",
-        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5087059",
+        "date": "July 14, 2026",
+        "url": "https://support.microsoft.com/help/5087059",
         "action": "Apply KB5087059 (.NET 3.5 + 4.8.1 cumulative for Server 2022)",
         "warning": null
       },
       {
+        "label": "Win Server 2019",
+        "target": ".NET 3.5 + 4.8 on Server 2019",
+        "kb": "KB5087066",
+        "date": "July 14, 2026",
+        "url": "https://support.microsoft.com/help/5087066",
+        "action": "Apply KB5087066 (.NET 3.5 + 4.8 cumulative for Server 2019)",
+        "warning": null
+      },
+      {
+        "label": "Win Server 2016",
+        "target": ".NET 4.8 on Server 2016",
+        "kb": "KB5087065",
+        "date": "July 14, 2026",
+        "url": "https://support.microsoft.com/help/5087065",
+        "action": "Apply KB5087065 (.NET 4.8 cumulative for Server 2016)",
+        "warning": null
+      },
+      {
         "label": "Win Server 2012 R2",
-        "target": ".NET 4.8 SQR on Server 2012 R2",
-        "kb": "KB5088861",
-        "date": "May 12, 2026",
-        "url": "https://support.microsoft.com/en-us/topic/may-12-2026-security-and-quality-rollup-for-net-framework-3-5-4-6-2-4-7-4-7-1-4-7-2-4-8-for-windows-server-2012-r2-kb5088861-ce0445f7-6b8b-4bf9-8164-ceba3cc29da3",
-        "action": "Apply Security and Quality Rollup KB5088861 for .NET 3.5 / 4.6.2 / 4.7.x / 4.8 on Server 2012 R2 (ESU required)",
+        "target": ".NET SQR on Server 2012 R2",
+        "kb": "KB5087063 / KB5087069",
+        "date": "July 14, 2026",
+        "url": "https://support.microsoft.com/help/5087063",
+        "action": "Apply Security-and-Quality Rollup KB5087063 (.NET 4.6.2/4.7.x) and KB5087069 (.NET 4.8) on Server 2012 R2 (ESU required)",
         "warning": "⚠️ Server 2012 R2 requires ESU. Final EOL October 2026."
       },
       {
@@ -170,20 +218,20 @@
   "SQL Server 2019 (All Components)": {
     "label": "SQL Server 2019",
     "icon": "🗄️",
-    "target": "CU32 + GDR — build 15.0.4470.1",
-    "kb": "KB5090407",
-    "date": "May 12, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/kb5090407-description-of-the-security-update-for-sql-server-2019-cu32-may-12-2026-3551e15f-b89c-4255-bb6a-97f745e642af",
-    "action": "Install CU32 + GDR (KB5090407). CU32 is the final CU; May 2026 security GDR applied on top.",
-    "warning": "⚠️ Mainstream Support ended Feb 28, 2025. Extended Support until Jan 8, 2030. | Reviewed Jun 10, 2026: no June 2026 update from Microsoft this cycle — May 2026 KBs remain current.",
+    "target": "CU32 + GDR — build 15.0.4485.1",
+    "kb": "KB5102335",
+    "date": "July 14, 2026",
+    "url": "https://support.microsoft.com/help/5096773",
+    "action": "Install CU32 + July 2026 GDR (KB5102335). CU32 is the final CU; July 2026 GDR layered on top.",
+    "warning": "⚠️ Mainstream Support ended Feb 28, 2025. Extended Support until Jan 8, 2030.",
     "alternatives": [
       {
         "label": "GDR Only",
-        "target": "GDR — build 15.0.2170.1",
-        "kb": "KB5090408",
-        "date": "May 12, 2026",
-        "url": "https://support.microsoft.com/en-us/topic/kb5090408-description-of-the-security-update-for-sql-server-2019-gdr-may-12-2026-f8d265b3-38e7-4b11-8870-f903185d88d9",
-        "action": "Apply GDR-only patch for security fixes without cumulative update changes (lower change risk)",
+        "target": "GDR — July 2026 branch",
+        "kb": "KB5102336",
+        "date": "July 14, 2026",
+        "url": "https://support.microsoft.com/help/5102336",
+        "action": "Apply GDR-only patch KB5102336 for security fixes without cumulative update changes (lower change risk)",
         "warning": "⚠️ GDR-only skips reliability and feature fixes in CU32. Use if CU testing is not yet complete."
       },
       {
@@ -200,80 +248,80 @@
   "SQL Server 2022 (All Components)": {
     "label": "SQL Server 2022",
     "icon": "🗄️",
-    "target": "CU24 + GDR — build 16.0.4252.3",
-    "kb": "KB5089900",
-    "date": "May 12, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/kb5089900-description-of-the-security-update-for-sql-server-2022-cu24-may-12-2026-695c0545-c0d1-4341-bb92-2f1037fe09b2",
-    "action": "Install CU24 + GDR (KB5089900, build 16.0.4252.3). Apply CU24 first if on CU23 or lower, then this May 2026 security update layers the GDR fixes on top. Do not mix CU and GDR branches.",
-    "warning": "ℹ️ Mainstream support until Jan 11, 2028; Extended until Jan 11, 2033. CU25 (KB5081477, build 16.0.4255.1) shipped May 20, 2026 with no new security fixes beyond CU24+GDR — plan to move to CU25 in next maintenance window. Reviewed Jun 10, 2026: no June 2026 update from Microsoft this cycle — May KBs remain current.",
+    "target": "CU25 + GDR — build 16.0.4270.1",
+    "kb": "KB5101347",
+    "date": "July 14, 2026",
+    "url": "https://support.microsoft.com/help/5101347",
+    "action": "Install CU25 + July 2026 GDR (KB5101347). CU25 shipped May 20, 2026; this July security update layers the GDR fixes on top. Do not mix CU and GDR branches.",
+    "warning": "ℹ️ Mainstream support until Jan 11, 2028; Extended until Jan 11, 2033.",
     "alternatives": [
       {
         "label": "GDR Only",
-        "target": "GDR — build 16.0.1180.1",
-        "kb": "KB5091158",
-        "date": "May 12, 2026",
-        "url": "https://support.microsoft.com/en-us/topic/kb5091158-description-of-the-security-update-for-sql-server-2022-gdr-may-12-2026-15964d04-ba47-4c0b-be12-2644c820ad3b",
-        "action": "Install GDR-only KB5091158 (build 16.0.1180.1) for security fixes without CU content. Lower change risk.",
-        "warning": "⚠️ GDR-only skips CU24 reliability and feature improvements. CU24 + GDR is recommended for most environments."
+        "target": "GDR — July 2026 branch",
+        "kb": "KB5102334",
+        "date": "July 14, 2026",
+        "url": "https://support.microsoft.com/help/5102334",
+        "action": "Install GDR-only KB5102334 for security fixes without CU content. Lower change risk.",
+        "warning": "⚠️ GDR-only skips CU25 reliability and feature improvements. CU25 + GDR is recommended for most environments."
       },
       {
-        "label": "Apr 2026 CU",
-        "target": "CU24 + GDR — build 16.0.4250.1 (KB5083252)",
-        "kb": "KB5083252",
-        "date": "April 14, 2026",
-        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5083252",
-        "action": "Apply April 2026 CU24+GDR (KB5083252) as a rollback target if May CU+GDR causes issues.",
-        "warning": "⚠️ Pinning to an older CU leaves May 2026 CVEs unpatched. Use only as a temporary rollback."
+        "label": "May 2026 CU + GDR",
+        "target": "CU24 + GDR — build 16.0.4252.3 (KB5089900)",
+        "kb": "KB5089900",
+        "date": "May 12, 2026",
+        "url": "https://support.microsoft.com/en-us/topic/kb5089900-description-of-the-security-update-for-sql-server-2022-cu24-may-12-2026-695c0545-c0d1-4341-bb92-2f1037fe09b2",
+        "action": "Apply May 2026 CU24+GDR (KB5089900) as a rollback target if July CU+GDR causes issues.",
+        "warning": "⚠️ Pinning to an older CU leaves July 2026 CVEs unpatched. Use only as a temporary rollback."
       }
     ]
   },
   "SQL Server 2025 (All Components)": {
     "label": "SQL Server 2025",
     "icon": "🗄️",
-    "target": "CU4 + GDR — build 17.0.4040.1",
-    "kb": "KB5089899",
-    "date": "May 12, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/kb5089899-description-of-the-security-update-for-sql-server-2025-cu4-may-12-2026-de2c44d3-81c5-46f7-a756-d579a067f24e",
-    "action": "Install CU4 + GDR (KB5089899, build 17.0.4040.1). Apply CU4 first if not yet on CU4, then layer the May 2026 GDR via this package. Do not mix CU and GDR branches.",
-    "warning": "ℹ️ SQL Server 2025 is the current major release (GA Nov 2025) — well within mainstream support. CU5 (KB5084896, build 17.0.4045.5) shipped May 20, 2026 with no new May security fixes beyond CU4+GDR. Young product on monthly CU cadence — higher regression risk, test in non-prod first. Reviewed Jun 10, 2026: no June 2026 update from Microsoft this cycle — May KBs remain current.",
+    "target": "CU6 + GDR — build 17.0.4060.1",
+    "kb": "KB5101346",
+    "date": "July 14, 2026",
+    "url": "https://support.microsoft.com/help/5101346",
+    "action": "Install CU6 + July 2026 GDR (KB5101346). Apply CU6 first if not yet on CU6, then layer the July 2026 GDR via this package. Do not mix CU and GDR branches.",
+    "warning": "ℹ️ SQL Server 2025 is the current major release (GA Nov 2025) — well within mainstream support. Young product on monthly CU cadence — higher regression risk, test in non-prod first.",
     "alternatives": [
       {
         "label": "GDR Only",
-        "target": "GDR — build 17.0.1115.1",
-        "kb": "KB5091223",
-        "date": "May 12, 2026",
-        "url": "https://support.microsoft.com/en-us/topic/kb5091223-description-of-the-security-update-for-sql-server-2025-gdr-may-12-2026-ea6c17d9-8f23-41e8-897a-54387b8f9e10",
-        "action": "Install GDR-only KB5091223 (build 17.0.1115.1) for security fixes without CU content. Lower change risk.",
-        "warning": "⚠️ GDR-only skips CU4 reliability and feature improvements. CU+GDR is recommended for most environments."
+        "target": "GDR — July 2026 branch",
+        "kb": "KB5102333",
+        "date": "July 14, 2026",
+        "url": "https://support.microsoft.com/help/5102333",
+        "action": "Install GDR-only KB5102333 for security fixes without CU content. Lower change risk.",
+        "warning": "⚠️ GDR-only skips CU6 reliability and feature improvements. CU + GDR is recommended for most environments."
       },
       {
-        "label": "Apr 2026 CU",
-        "target": "CU3 + GDR — build 17.0.4030.1 (KB5083245)",
-        "kb": "KB5083245",
-        "date": "April 14, 2026",
-        "url": "https://www.catalog.update.microsoft.com/Search.aspx?q=KB5083245",
-        "action": "Apply April 2026 CU3+GDR (KB5083245) as a rollback target if May CU+GDR causes issues.",
-        "warning": "⚠️ Pinning to an older CU leaves May 2026 CVEs unpatched. Use only as a temporary rollback."
+        "label": "May 2026 CU + GDR",
+        "target": "CU4 + GDR — build 17.0.4040.1 (KB5089899)",
+        "kb": "KB5089899",
+        "date": "May 12, 2026",
+        "url": "https://support.microsoft.com/en-us/topic/kb5089899-description-of-the-security-update-for-sql-server-2025-cu4-may-12-2026-de2c44d3-81c5-46f7-a756-d579a067f24e",
+        "action": "Apply May 2026 CU4+GDR (KB5089899) as a rollback target if July CU+GDR causes issues.",
+        "warning": "⚠️ Pinning to an older CU leaves July 2026 CVEs unpatched. Use only as a temporary rollback."
       }
     ]
   },
   "SQL Server 2017 (All Components)": {
     "label": "SQL Server 2017",
     "icon": "🗄️",
-    "target": "CU31 + GDR — build 14.0.3530.2",
-    "kb": "KB5090354",
-    "date": "May 12, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/kb5090354-description-of-the-security-update-for-sql-server-2017-cu31-may-12-2026-278c1395-f4e4-42d3-ba28-4b03067a9656",
-    "action": "Install CU31 + GDR (KB5090354). May 2026 security GDR on top of final CU.",
-    "warning": "⚠️ Mainstream Support ended Oct 2022. Extended Support until Oct 2027. | Reviewed Jun 10, 2026: no June 2026 update from Microsoft this cycle — May 2026 KBs remain current.",
+    "target": "CU31 + GDR — build 14.0.3545.1",
+    "kb": "KB5102337",
+    "date": "July 14, 2026",
+    "url": "https://support.microsoft.com/help/5102337",
+    "action": "Install CU31 + July 2026 GDR (KB5102337). July 2026 security GDR on top of final CU.",
+    "warning": "⚠️ Mainstream Support ended Oct 2022. Extended Support until Oct 2027.",
     "alternatives": [
       {
         "label": "GDR Only",
-        "target": "GDR — build 14.0.2110.2",
-        "kb": "KB5090347",
-        "date": "May 12, 2026",
-        "url": "https://support.microsoft.com/en-us/topic/kb5090347-description-of-the-security-update-for-sql-server-2017-gdr-may-12-2026-d3f29107-6614-4f4c-9979-f986763d7e79",
-        "action": "Apply GDR-only patch for security fixes with minimal change impact",
+        "target": "GDR — July 2026 branch",
+        "kb": "KB5102338",
+        "date": "July 14, 2026",
+        "url": "https://support.microsoft.com/help/5102338",
+        "action": "Apply GDR-only patch KB5102338 for security fixes with minimal change impact",
         "warning": "⚠️ GDR-only skips CU31 reliability and feature fixes. CU31 + GDR is recommended."
       },
       {
@@ -290,13 +338,22 @@
   "SQL Server 2016 (All Components)": {
     "label": "SQL Server 2016",
     "icon": "🗄️",
-    "target": "SP3 GDR — build 13.0.6490.1",
-    "kb": "KB5089271",
-    "date": "May 12, 2026",
-    "url": "https://support.microsoft.com/en-us/topic/kb5089271-description-of-the-security-update-for-sql-server-2016-sp3-gdr-may-12-2026-f4c3f32d-5ae9-4eae-ac04-b63de1eae66f",
-    "action": "Install SP3 + GDR (KB5089271). No further CUs will be released for SQL Server 2016.",
-    "warning": "⚠️ Mainstream Support ended July 2021. Extended Support ends July 11, 2026 — migration is urgent. | Reviewed Jun 10, 2026: no June 2026 update from Microsoft this cycle — May 2026 KBs remain current.",
+    "target": "SP3 GDR — build 13.0.6505.1",
+    "kb": "KB5102340",
+    "date": "July 14, 2026",
+    "url": "https://support.microsoft.com/help/5102340",
+    "action": "Install SP3 + July 2026 GDR (KB5102340). No further CUs will be released for SQL Server 2016.",
+    "warning": "🚫 Mainstream Support ended July 2021. Extended Support ended July 11, 2026 — this may be the FINAL security update. Migration is urgent.",
     "alternatives": [
+      {
+        "label": "Azure Connect FP",
+        "target": "SP3 Azure Connect Feature Pack",
+        "kb": "KB5102339",
+        "date": "July 14, 2026",
+        "url": "https://support.microsoft.com/help/5096777",
+        "action": "Apply July 2026 GDR for the SP3 Azure Connect Feature Pack (KB5102339) if the Azure Connect feature is installed",
+        "warning": null
+      },
       {
         "label": "Migrate → 2022",
         "target": "SQL Server 2022",
@@ -304,7 +361,7 @@
         "date": "Plan now",
         "url": "https://learn.microsoft.com/en-us/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
         "action": "Plan upgrade to SQL Server 2022 (mainstream support until Jan 2033)",
-        "warning": "🚫 Extended Support ends July 2026. This is the only long-term fix."
+        "warning": "🚫 Extended Support ended July 2026. Upgrade is the only long-term fix."
       },
       {
         "label": "Migrate → 2019",
