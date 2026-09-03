@@ -4,6 +4,20 @@ All notable changes to `patch_data.json` are documented here.
 
 Format: `YYYY-MM-DD` — short summary of what changed and why.
 
+## 2026-09-03 — August 2026 Patch Tuesday refresh
+
+- Refreshed all 5 Windows Server entries + .NET Framework to **August 11, 2026** KBs. All KB/build/date/URL values verified against support.microsoft.com.
+- Windows Server 2019: KB5099538 → **KB5120238** (build 17763.9121).
+- Windows Server 2016: KB5099535 → **KB5120418** (build 14393.9418).
+- Windows Server 2022: KB5099540 → **KB5120242** (build 20348.5499). Standard Security-Update LCU chosen over the no-reboot Hotpatch variant (KB5120229).
+- Windows Server 2025: KB5099536 → **KB5120233** (build 26100.33296). Standard LCU over Hotpatch (KB5120228).
+- Windows Server 2012 R2 (ESU): KB5099444 → **KB5120385** (Monthly Rollup, build 6.3.9600.23338). 2 ESU rollups remaining before October 13, 2026 final EOL.
+- Promoted previous "Jun 2026 CU" rollback alternatives to **"Jul 2026 CU"** rollbacks (KB5099538 / KB5099535 / KB5099540) on the 2019/2016/2022 entries; updated WSUS Catalog search URLs to the new August KBs.
+- **.NET Framework**: refreshed per-OS security-and-quality rollups to August KBs — Server 2025 **KB5120708** (3.5+4.8.1), Server 2022 **KB5120714** (3.5+4.8.1), Server 2019 **KB5120703** (3.5+4.8), Server 2016 **KB5120702** (4.8), Server 2012 R2 **KB5120700 / KB5120706** (4.7.x + 4.8). Release-note URL → 2026-Aug.
+- **SQL Server 2016 / 2017 / 2019 / 2022 / 2025**: unchanged. The August 2026 MSRC CVRF (`2026-Aug`) contains **zero SQL Server products** — no SQL Server security update shipped this cycle. July 2026 CU+GDR KBs remain current.
+- IE entry unchanged (permanently retired).
+- Sources: MSRC CVRF `2026-Aug` (`Vulnerability[].Remediations`, Type 2 Vendor Fix); support.microsoft.com KB/update-history pages for each KB (all confirmed August 11, 2026). Note: the CVRF `CurrentReleaseDate` field reads `2026-09-08`, but every support.microsoft.com page dates these KBs **August 11, 2026** (the actual Patch Tuesday) — the human-readable date follows the support pages.
+
 ## 2026-06-10 — Add SQL Server 2022 / 2025; June 2026 no-update notes
 
 - **Added SQL Server 2022** entry: primary CU24 + GDR (KB5089900, build 16.0.4252.3, May 12, 2026); GDR-only alternative KB5091158 (build 16.0.1180.1); April 2026 CU24+GDR (KB5083252) rollback. Mainstream support until Jan 11, 2028.
